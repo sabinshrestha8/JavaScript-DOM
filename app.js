@@ -1,36 +1,21 @@
-const list = document.querySelector('#book-list ul');
+var book = document.querySelector('li:first-child .name');
 
-// delete books
-list.addEventListener('click', function (e) {
-    if (e.target.className == 'delete') {
-        const li = e.target.parentElement;
-        list.removeChild(li);
-    }
-});
+book;
 
-// add books
-const addForm = document.forms['add-book'];
+book.getAttribute('class');
 
-addForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const value = addForm.querySelector('input[type="text"]').value;
+book.getAttribute('href');
 
-    // create elements
-    const li = document.createElement('li');
-    const bookName = document.createElement('span');
-    const deleteBtn = document.createElement('span');
+book.setAttribute('class', 'namee');
 
-    // add content
-    deleteBtn.textContent = 'delete';
-    bookName.textContent = value;
+book;
 
-    // add classes
-    bookName.classList.add('name');
-    deleteBtn.classList.add('delete');
+book.hasAttribute('class');
 
-    // append to the DOM(document)
-    li.appendChild(bookName);
-    li.appendChild(deleteBtn);
-    list.appendChild(li);
-});
+book.removeAttribute('class');
 
+book;
+
+book.setAttribute('class', 'name');
+
+book;
